@@ -12,7 +12,7 @@ var Buttons = React.createClass({
           <Link to="dashboard.overview" className="pull-right btn btn-primary btn-outline btn-rounded">Back to Overview</Link> 
           <h2>Reports <small>Work with Chart.js and D3</small></h2> 
 
-          <i className="fa fa-dashboard bg-fade"></i>
+          <i className="glyphicon glyphicon-dashboard bg-fade"></i>
           <Jumbotron> 
             <h1>Add Charts here</h1> 
             <p>You can use C3.js or Chart.js</p> 
