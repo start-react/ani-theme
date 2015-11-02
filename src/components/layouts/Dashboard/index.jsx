@@ -1,5 +1,6 @@
 import React from "react";
 import Router, { Link, RouteHandler } from "react-router";
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import {Navbar, Nav, NavItem, NavDropdown, MenuItem, ProgressBar} from "react-bootstrap";
 import $ from "jQuery";
@@ -43,6 +44,8 @@ var HomePage = React.createClass({
 
     // var name = this.context.router.getCurrentPath();
 
+    const { pathname } = this.props.location;
+
     var title = <span><a href="http://startreact.com/" title="Start React" rel="home"><img src="http://startreact.com/wp-content/themes/dazzling-child/images/logo.png" alt="Start React" title="Start React" height="35px" />&nbsp;SB Admin React - StartReact.com</a></span>;
     
     return (
@@ -70,9 +73,15 @@ var HomePage = React.createClass({
                 </ul> 
               </div>
 
-              <div className="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main ng-scope" ui-view="">
-
-              {this.props.children || this.props.history.pushState(null, '/overview')}
+              <div className="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main ng-scope">
+                <ReactCSSTransitionGroup component="div"
+                                 transitionName="example"
+                                 transitionEnterTimeout={500}
+                                 transitionLeaveTimeout={500}
+                >
+                  {React.cloneElement(this.props.children || <div />, { key: pathname })}
+                </ReactCSSTransitionGroup>
+              
                 
               </div> 
             </div> 
