@@ -1,15 +1,12 @@
-import React from 'react';
-import AsyncElement from '../../../common/AsyncElement';
+import NProgress from 'nProgress';
 
-var PreReports = React.createClass({
-
-  mixins: [ AsyncElement ],
-
-  bundle: require('bundle?lazy!./Reports.jsx'),
-
-  preRender: function () {
-  	return null; //<div>Loading Reports...</div>;
+module.exports = {
+  path: 'reports',
+  getComponent(location, cb) {
+  	NProgress.start();
+    require.ensure([], (require) => {
+			require('nProgress').done();
+      cb(null, require('./Reports'));
+    });
   }
-});
-
-export default PreReports;
+}

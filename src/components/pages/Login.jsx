@@ -1,6 +1,7 @@
 import React from 'react';
 import Router from 'react-router';
 import {Panel, Input, Button} from 'react-bootstrap';
+import { History } from 'history';
 
 var LoginPage = React.createClass({
 
@@ -12,7 +13,7 @@ var LoginPage = React.createClass({
     };
   },
 
-  mixins: [Router.Navigation],
+  mixins: [History],
 
   render: function(){
   
@@ -62,8 +63,10 @@ var LoginPage = React.createClass({
   },
 
   handleLogin: function(e){
-
-    this.transitionTo('dashboard');
+    e.preventDefault();
+    this.props.history.pushState(null, '/overview');
+    
+    // this.transitionTo('dashboard');
 
     return false;
 

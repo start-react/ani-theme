@@ -5,8 +5,6 @@ import {Navbar, Nav, NavItem, NavDropdown, MenuItem, ProgressBar} from "react-bo
 import $ from "jQuery";
 import classNames from "classnames";
 
-var TransitionGroup = require('react/lib/ReactCSSTransitionGroup');
-
 var HomePage = React.createClass({
     
   componentWillMount: function() {
@@ -43,10 +41,10 @@ var HomePage = React.createClass({
 
     //console.log(this.context);
 
-    var name = this.context.router.getCurrentPath();
+    // var name = this.context.router.getCurrentPath();
 
     var title = <span><a href="http://startreact.com/" title="Start React" rel="home"><img src="http://startreact.com/wp-content/themes/dazzling-child/images/logo.png" alt="Start React" title="Start React" height="35px" />&nbsp;SB Admin React - StartReact.com</a></span>;
-
+    
     return (
         <div className="dashboard-page"> 
           <div className="container-fluid"> 
@@ -61,10 +59,10 @@ var HomePage = React.createClass({
 
                 <ul className="nav nav-sidebar"> 
                   <li>
-                    <Link to='dashboard.overview'>Overview</Link>
+                    <Link to='overview'>Overview</Link>
                   </li> 
                   <li>
-                    <Link to='dashboard.reports'>Reports</Link>
+                    <Link to='reports'>Reports</Link>
                   </li> 
                   <li>
                     <a href="http://www.strapui.com/ani-angularjs-theme">Ani Theme Premium Edition</a>
@@ -74,11 +72,7 @@ var HomePage = React.createClass({
 
               <div className="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main ng-scope" ui-view="">
 
-              {(<RouteHandler key={name} {...this.props}/> ? (
-                <TransitionGroup component="div" transitionName="example">
-                  <RouteHandler key={name} {...this.props}/>
-                </TransitionGroup>
-              ): null)}
+              {this.props.children || this.props.history.pushState(null, '/overview')}
                 
               </div> 
             </div> 

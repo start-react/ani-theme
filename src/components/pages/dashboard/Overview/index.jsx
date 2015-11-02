@@ -1,15 +1,13 @@
-import React from 'react';
-import AsyncElement from '../../../common/AsyncElement';
+import NProgress from 'nProgress';
 
-var PreOverview = React.createClass({
-
-  mixins: [ AsyncElement ],
-
-  bundle: require('bundle?lazy!./Overview.jsx'),
-
-  preRender: function () {
-  	return <div>Loading Overview...</div>;
+module.exports = {
+  path: 'overview',
+  getComponent(location, cb) {
+  	NProgress.start();
+  	console.log("after nProgress start");
+    require.ensure([], (require) => {
+    	require('nProgress').done();
+      cb(null, require('./Overview'));
+    });
   }
-});
-
-export default PreOverview;
+}
