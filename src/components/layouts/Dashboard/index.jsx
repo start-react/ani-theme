@@ -62,7 +62,7 @@ var HomePage = React.createClass({
 
                 <ul className="nav nav-sidebar"> 
                   <li>
-                    <Link to='overview'>Overview</Link>
+                    <Link to='/'>Overview</Link>
                   </li> 
                   <li>
                     <Link to='reports'>Reports</Link>
@@ -73,11 +73,11 @@ var HomePage = React.createClass({
                 </ul> 
               </div>
 
-              <div className="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main ng-scope">
+              <div className="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main ng-scope ui-view-main">
                 <ReactCSSTransitionGroup component="div"
-                                 transitionName="example"
+                                 transitionName="ng"
                                  transitionEnterTimeout={500}
-                                 transitionLeaveTimeout={500}
+                                 transitionLeaveTimeout={300}
                 >
                   {React.cloneElement(this.props.children || <div />, { key: pathname })}
                 </ReactCSSTransitionGroup>

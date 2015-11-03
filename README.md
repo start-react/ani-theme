@@ -1,8 +1,8 @@
-## SB Admin v2.0 rewritten in React.js
+## Ani Theme rewritten in React.js
 
 [![Join the chat at https://gitter.im/start-react/sb-admin-react](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/start-react/sb-admin-react?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-This project is a port of the famous Free Admin Bootstrap Theme [SB Admin v2.0](http://startbootstrap.com/template-overviews/sb-admin-2/) to React.js Theme based on [Essential React](https://github.com/pheuter/essential-react) using ES6 & Webpack.
+This project is a port of the famous Free Ani Theme (http://startbootstrap.com/template-overviews/ani-theme/) to React.js Theme based on [Essential React](https://github.com/pheuter/essential-react) using ES6 & Webpack.
 
 Find out more [Free React.js and React Native Themes at StartReact.com](http://www.startreact.com/).
 
@@ -10,7 +10,7 @@ Find out more [Free React.js and React Native Themes at StartReact.com](http://w
 ####1. Clone this project or Download that ZIP file
 
 ```sh
-$ git clone https://github.com/start-react/sb-admin-react.git
+$ git clone https://github.com/start-react/ani-theme.git
 ```
 
 ####2.  Make sure you have [npm](https://www.npmjs.org/) installed globally

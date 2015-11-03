@@ -5,7 +5,7 @@ import {Jumbotron} from 'react-bootstrap';
 var Blank = React.createClass({
   render: function() {
     return (
-      <div className="overview-page" key="overview"> 
+      <div className="overview-page ui-view" key="overview"> 
         <Link to="reports" className="pull-right btn btn-primary btn-outline btn-rounded">Reports</Link> 
         <h2>Overview <small>Why is Ani Theme so awesome?</small></h2> 
         <Jumbotron> 

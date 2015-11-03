@@ -64,7 +64,7 @@ var LoginPage = React.createClass({
 
   handleLogin: function(e){
     e.preventDefault();
-    this.props.history.pushState(null, '/overview');
+    this.props.history.pushState(null, '/');
     
     // this.transitionTo('dashboard');
 
