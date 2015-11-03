@@ -2,6 +2,8 @@ import React from 'react';
 import Router from 'react-router';
 import {Panel, Input, Button} from 'react-bootstrap';
 import { History } from 'history';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import $ from "jQuery";
 
 var LoginPage = React.createClass({
 
@@ -17,9 +19,8 @@ var LoginPage = React.createClass({
 
   render: function(){
   
-    return <div>
-
-        <div className="login-page ng-scope"> 
+    return(
+        <div className="login-page ng-scope ui-view"> 
           <div className="row"> 
             <div className="col-md-4 col-lg-4 col-md-offset-4 col-lg-offset-4"> 
               <img src={require("../../common/images/flat-avatar.png")} className="user-avatar" /> 
@@ -38,8 +39,8 @@ var LoginPage = React.createClass({
             </div> 
           </div> 
         </div>
-        
-      </div>
+      
+    );
       
 
   },

@@ -3,22 +3,21 @@ to prevent collapsing during animation*/
 /*.well.ui-view{
  height: 65px; 
 }*/
-.ui-view-main {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-}
+// .ui-view-main {
+//   position: absolute;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   top: 0;
+// }
 .ui-view {
   position: absolute;
   bottom: 0;
   top: 0;
-  left: 20px;
-  right: 20px;
-  text-align: center;
-  animation-name: page;
-  animation-duration: 0.5s;
+  left: 0;
+  right: 0;
+  // padding: 20px;
+  // text-align: center;
 }
 
 .ui-view-container {
@@ -61,9 +60,4 @@ to prevent collapsing during animation*/
   -webkit-transform:translate3d(0, 0, 0);
   -moz-transform:translate3d(0, 0, 0);
   transform:translate3d(0, 0, 0);
-}
-
-@keyframes page {
-  from {top:20px; left:40px; right:40px;}
-  to {top:0px; left:20px; right:20px;}
 }

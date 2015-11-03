@@ -6,14 +6,13 @@ import "./common/styles/app.less";
 import NProgress from 'nProgress';
 
 NProgress.configure({ showSpinner: false });
-// NProgress.configure({ parent: 'body' });
 
 const history = useBasename(createHistory)({
   basename: '#/ani-react'
 })
 
 const rootRoute = {
-  component: 'div',
+  component: require('./components/layouts/Base'),
   childRoutes: [ {
       component: require('./components/layouts/Dashboard'),
       childRoutes: [

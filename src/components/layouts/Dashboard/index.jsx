@@ -17,7 +17,6 @@ var HomePage = React.createClass({
   },
 
   componentWillUnmount: function(){
-    
     $(window).unbind('resize',this.adjustResize);
 
   },
@@ -49,7 +48,7 @@ var HomePage = React.createClass({
     var title = <span><a href="http://startreact.com/" title="Start React" rel="home"><img src="http://startreact.com/wp-content/themes/dazzling-child/images/logo.png" alt="Start React" title="Start React" height="35px" />&nbsp;SB Admin React - StartReact.com</a></span>;
     
     return (
-        <div className="dashboard-page"> 
+        <div className="dashboard-page ui-view"> 
           <div className="container-fluid"> 
             <div className="row"> 
               <div className="col-sm-3 col-md-2 sidebar"> 
@@ -74,20 +73,19 @@ var HomePage = React.createClass({
               </div>
 
               <div className="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main ng-scope ui-view-main">
-                <ReactCSSTransitionGroup component="div"
+               <ReactCSSTransitionGroup component="div"
                                  transitionName="ng"
                                  transitionEnterTimeout={500}
                                  transitionLeaveTimeout={300}
                 >
                   {React.cloneElement(this.props.children || <div />, { key: pathname })}
                 </ReactCSSTransitionGroup>
-              
+
                 
               </div> 
             </div> 
           </div> 
         </div>
-
     );
   },
 
