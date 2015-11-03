@@ -1,7 +1,7 @@
 import NProgress from 'nProgress';
 
 module.exports = {
-  path: '/reports',
+  path: '/dashboard/reports',
   getComponent(location, cb) {
   	NProgress.start();
     require.ensure([], (require) => {

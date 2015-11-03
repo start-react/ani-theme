@@ -8,10 +8,11 @@ import NProgress from 'nProgress';
 NProgress.configure({ showSpinner: false });
 
 const history = useBasename(createHistory)({
-  basename: '#/ani-react'
+  basename: '#/'
 })
 
 const rootRoute = {
+  path: '/',
   component: require('./components/layouts/Base'),
   childRoutes: [ {
       component: require('./components/layouts/Dashboard'),

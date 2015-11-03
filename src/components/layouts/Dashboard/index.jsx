@@ -61,10 +61,10 @@ var HomePage = React.createClass({
 
                 <ul className="nav nav-sidebar"> 
                   <li>
-                    <Link to='/'>Overview</Link>
+                    <Link to="/dashboard/overview">Overview</Link>
                   </li> 
                   <li>
-                    <Link to='/reports'>Reports</Link>
+                    <Link to="/dashboard/reports">Reports</Link>
                   </li> 
                   <li>
                     <a href="http://www.strapui.com/ani-angularjs-theme">Ani Theme Premium Edition</a>
@@ -72,17 +72,15 @@ var HomePage = React.createClass({
                 </ul> 
               </div>
 
-              <div className="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main ng-scope ui-view-main">
                <ReactCSSTransitionGroup component="div"
                                  transitionName="ng"
                                  transitionEnterTimeout={500}
                                  transitionLeaveTimeout={300}
                 >
-                  {React.cloneElement(this.props.children || <div />, { key: pathname })}
+                  {React.cloneElement(<div className="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main ng-scope ui-view">{this.props.children}</div> || <div />, { key: pathname })}
                 </ReactCSSTransitionGroup>
 
                 
-              </div> 
             </div> 
           </div> 
         </div>
