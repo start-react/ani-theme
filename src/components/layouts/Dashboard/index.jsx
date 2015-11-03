@@ -57,7 +57,7 @@ var HomePage = React.createClass({
                   <h2 className="brand">Ani Theme <small>Free Edition</small></h2> 
                   <img src={require("../../../common/images/flat-avatar.png")} className="user-avatar" />
                   <br /> 
-                  <Link to="login" className="btn btn-white btn-outline btn-rounded btn-sm">Logout</Link> 
+                  <Link to="/login" className="btn btn-white btn-outline btn-rounded btn-sm">Logout</Link> 
                 </div> 
 
                 <ul className="nav nav-sidebar"> 
@@ -65,7 +65,7 @@ var HomePage = React.createClass({
                     <Link to='/'>Overview</Link>
                   </li> 
                   <li>
-                    <Link to='reports'>Reports</Link>
+                    <Link to='/reports'>Reports</Link>
                   </li> 
                   <li>
                     <a href="http://www.strapui.com/ani-angularjs-theme">Ani Theme Premium Edition</a>
