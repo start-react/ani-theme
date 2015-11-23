@@ -1,14 +1,14 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { createHistory, useBasename } from 'history';
+import { createHashHistory, useBasename } from 'history';
 import { Router } from 'react-router';
 import "./common/styles/app.less";
 import NProgress from 'nProgress';
 
 NProgress.configure({ showSpinner: false });
 
-const history = useBasename(createHistory)({
-  basename: '#/'
+const history = useBasename(createHashHistory)({
+   queryKey: false
 })
 
 const rootRoute = {

@@ -12,7 +12,7 @@ var Base = React.createClass({
   render: function() {
   	const { pathname } = this.props.location;
 
-    if(pathname.substr(0, 10) == 'dashboard/')
+    if(pathname.substr(0, 10) == '/dashboard')
         var change = 'internal';
     else
         var change = pathname;
@@ -28,7 +28,6 @@ var Base = React.createClass({
           {React.cloneElement(<div className="ui-view">{this.props.children}</div> || <div />, { key: change })}
           </ReactCSSTransitionGroup>}
 
-          </div>
         </div>
       );
     }

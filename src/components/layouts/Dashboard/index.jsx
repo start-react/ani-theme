@@ -53,7 +53,7 @@ var HomePage = React.createClass({
             <div className="row"> 
               <div className="col-sm-3 col-md-2 sidebar"> 
                 <div className="text-center"> 
-                  <h2 className="brand">Ani Theme <small>Free Edition</small></h2> 
+                  <h2 className="brand">Ani Theme <br /><small>Free React.js Edition</small></h2> 
                   <img src={require("../../../common/images/flat-avatar.png")} className="user-avatar" />
                   <br /> 
                   <Link to="/login" className="btn btn-white btn-outline btn-rounded btn-sm">Logout</Link> 
@@ -67,7 +67,16 @@ var HomePage = React.createClass({
                     <Link to="/dashboard/reports">Reports</Link>
                   </li> 
                   <li>
-                    <a href="http://www.strapui.com/themes/ani-reactjs-theme/">Ani Theme Premium Edition</a>
+                    <a href="http://startangular.com/product/ani-theme/">Free Angular version</a>
+                  </li>
+                  <li>
+                    <a href="http://www.strapui.com/ani-reactjs-theme">Premium React.js Edition</a>
+                  </li> 
+                  <li>
+                    <a href="http://www.strapui.com/ani-angularjs-theme">Premium AngularJS Edition</a>
+                  </li> 
+                  <li>
+                    <a href="http://www.strapui.com/themes/ani-laravel-theme/">Premium Laravel Edition</a>
                   </li> 
                 </ul> 
               </div>
