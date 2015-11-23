@@ -67,7 +67,7 @@ var HomePage = React.createClass({
                     <Link to="/dashboard/reports">Reports</Link>
                   </li> 
                   <li>
-                    <a href="http://www.strapui.com/ani-angularjs-theme">Ani Theme Premium Edition</a>
+                    <a href="http://www.strapui.com/themes/ani-reactjs-theme/">Ani Theme Premium Edition</a>
                   </li> 
                 </ul> 
               </div>
